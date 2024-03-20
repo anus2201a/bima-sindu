@@ -1,0 +1,2704 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+/*  font-family: "Inter", sans-serif; */
+
+@font-face {
+  font-family: "Nunito-Light";
+  src: url(../fonts/Nunito-Light.ttf);
+}
+
+@font-face {
+  font-family: "Nunito-Medium";
+  src: url(../fonts/Nunito-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Nunito-Regular";
+  src: url(../fonts/Nunito-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Nunito-SemiBold";
+  src: url(../fonts/Nunito-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Nunito-Bold";
+  src: url(../fonts/Nunito-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Nunito-ExtraBold";
+  src: url(../fonts/Nunito-ExtraBold.ttf);
+}
+
+h1 {
+  font-family: "Nunito-ExtraBold";
+  font-weight: 900;
+}
+
+h2 {
+  font-family: "Nunito-Bold";
+  font-weight: 800;
+}
+
+h3 {
+  font-family: "Nunito-SemiBold";
+  font-weight: 700;
+}
+
+h4 {
+  font-family: "Nunito-Regular";
+  font-weight: 600;
+}
+
+h5 {
+  font-family: "Nunito-Medium";
+  font-weight: 500;
+}
+
+h6 {
+  font-family: "Nunito-Light";
+  font-weight: 400;
+}
+
+p {
+  font-weight: 400;
+}
+
+/* Heading Style Start Here*/
+.heading-one {
+  font-size: 60px;
+  line-height: 70px;
+}
+
+.heading-two {
+  font-size: 55px;
+  line-height: 65px;
+}
+
+.heading-three {
+  font-size: 50px;
+  line-height: 55px;
+}
+
+.heading-four {
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.heading-five {
+  font-size: 25px;
+  line-height: 32px;
+}
+
+.heading-six {
+  font-size: 20px;
+  line-height: 27px;
+}
+
+/* Heading Style  End Here*/
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ebebeb;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #0a292e;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #0a292e;
+}
+
+::selection {
+  color: #fff;
+  background: #0a292e;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+textarea:focus,
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/*RESPONSIVE NAVIGATION*/
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu .circle {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  border-radius: 50%;
+  background: #0a292e;
+  margin: 0 auto;
+  font-size: 16px;
+  position: fixed;
+  right: 20px;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  border: 2px solid #fff;
+}
+
+.mobile-menu .mobile-cross {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  border-radius: 50%;
+  background: #0a292e;
+  margin: 0 auto;
+  font-size: 16px;
+  position: fixed;
+  right: 13px;
+  top: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  border: 2px solid #fff;
+}
+
+.mobile-menu .nveMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 280px;
+  height: 100%;
+  background: #fff;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+  transform: translateX(-320px);
+  transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+  padding: 40px 20px;
+  border: 2px solid #fff;
+}
+
+.mobile-menu .nveMenu.is-opened {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.mobile-menu .overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100% - 280px);
+  height: 100%;
+  background: rgba(0, 0, 0, 0.71);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.mobile-menu .overlay.is-on {
+  opacity: 1;
+  visibility: visible;
+  z-index: 999;
+}
+
+.mobile-menu .navlinks li {
+  display: block;
+  padding: 8px 0;
+}
+
+.mobile-menu .navlinks li a {
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #000;
+  font-size: 15px;
+}
+
+.mobile-menu .navlinks li a:hover {
+  text-decoration: none;
+  color: #ffe500;
+}
+
+.mobile-menu-img img {
+  width: 102px;
+}
+
+.mobile-dropdown a {
+  background: 0 0;
+  border: none;
+  text-transform: uppercase;
+  color: #666;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.mobile-dropdown ul.dropdown-menu.show {
+  border-radius: 0 0 20px 20px;
+  border: none;
+  height: auto;
+  padding: 15px;
+  box-shadow: 0 15px 35px #00000029;
+  overflow: auto;
+}
+
+ul.dropdown-menu.show li {
+  font-size: 14px;
+  letter-spacing: -0.9px;
+}
+
+header.header-top-bg {
+  display: none;
+}
+
+/*RESPONSIVE NAVIGATION*/
+
+/* ***************  header css start here  ********************* */
+.top-header {
+  background: #11235a;
+  overflow: hidden;
+}
+
+header .top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+header .top-nav-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 400;
+  float: left;
+  padding-top: 10px;
+}
+
+header .top-para {
+  font-size: 14px;
+  padding: 0px 3px;
+  margin: 0 10px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+header .top-para a {
+  color: #fff;
+}
+
+header .top-para a i {
+  margin: 0 5px;
+  color: #ffe500;
+}
+
+.main-header .main-navigation ul li.nav-btn:hover::after {
+  display: none;
+}
+
+header .nav-socail-icon {
+  padding: 10px 0;
+  margin: 0;
+}
+
+.main-header .dropdown .dropdown-menu li a {
+  color: #fff;
+}
+
+header .main-nav {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+header .main-nav a {
+  padding: 0;
+  margin: 0 2px;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 17px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.active-header {
+  background-color: rgba(255, 255, 255) !important;
+  top: 0;
+  border-bottom: 2px solid #707070;
+}
+
+.second-header {
+  background: #fff;
+  display: none;
+  visibility: hidden;
+  position: fixed;
+  transition: all 0.75s linear !important;
+  width: 100%;
+  border-bottom: 1px solid #f2653a;
+  padding: 10px 0;
+  line-height: 0;
+}
+
+.second-header.sticky-header {
+  display: flex;
+  visibility: visible;
+  transition: all 0.75s linear !important;
+  top: -100px;
+  transform: translateY(100px);
+  z-index: 200;
+}
+
+.second-header .dropdown-nav {
+  margin: 12px 0;
+  padding: 10px 15px 0 15px;
+}
+
+.second-header-dropdown li a:hover {
+  color: #f2653a;
+}
+
+.second-header ul.nav.navbar-na {
+  line-height: 70px;
+  top: 0;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.main-header-bg {
+  background: #0a292e;
+  line-height: 77px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ffffff2b;
+}
+
+.main-header-bg .main-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-header .main-navigation a.nav-link.active {
+  color: #ffe500;
+  border-bottom: 2px solid #fff;
+}
+
+.main-navigation ul.dropdown-menu li:hover:after {
+  display: none;
+}
+
+.main-header .main-navigation ul li a {
+  color: #f1fbfc;
+  text-decoration: none;
+  padding: 0 10px;
+  font-weight: 700;
+  font-size: 16px;
+  transition: 0.3s;
+  text-transform: capitalize;
+  font-family: "Nunito-SemiBold";
+}
+
+.main-header .main-navigation ul li a:hover {
+  color: #ffe500;
+}
+
+.main-header .main-navigation ul li {
+  position: relative;
+}
+
+.main-header .main-navigation ul li:hover::after {
+  content: "";
+  background: #ffffff;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.main-header .main-navigation ul li.dropdown a:hover::after {
+  background: none;
+}
+
+.main-header .dropdown .dropdown-menu {
+  box-shadow: 0 15px 35px #00000029;
+  border-radius: 10px;
+  opacity: 1;
+  top: 70px;
+  padding: 10px 20px;
+  background-color: #0d3035;
+}
+
+.main-header .dropdown .dropdown-menu ul li a {
+  letter-spacing: 0;
+  color: #000;
+  font-size: 14px;
+  padding: 0 10px 0 40px;
+}
+
+.main-navigation ul.nav li.dropdown:hover ul.dropdown-menu {
+  display: block;
+}
+
+.main-navigation .dropdown-menu {
+  line-height: 40px;
+  width: max-content;
+}
+
+.main-dropdown-arrow .button {
+  position: relative;
+}
+
+.navi-drop-hr {
+  width: 95% !important;
+  margin: 0;
+}
+
+.main-navigation .nav-btn button {
+  background: #0f3e45;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 5px;
+  width: 130px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 0 20px;
+  border: none;
+}
+
+.main-navigation .nav-btn button:hover {
+  background: #fff;
+  color: #0a292e !important;
+  border: none;
+}
+
+/* ***************  header css end here  ********************* */
+/* ***************  sec-home-banner css start here  ********************* */
+.sec-home-banner {
+  padding: 120px 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    360deg,
+    rgba(2, 9, 10, 1) 0%,
+    rgba(13, 48, 53, 1) 50%
+  );
+  border-radius: 0 0 45% 45%;
+  height: 675px;
+}
+
+.sec-home-banner .banner-details {
+  text-align: center;
+  color: #f1fbfc;
+}
+
+.sec-home-banner .banner-details h6 {
+  color: #ffe500;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 1px;
+  line-height: 24px;
+}
+
+.sec-home-banner .banner-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec-home-banner .banner-button a.btn.read-btn {
+  background: transparent;
+  padding: 5px 5px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 0;
+  box-shadow: none;
+  text-transform: capitalize;
+  border: 1px solid #fff;
+  outline: none;
+  width: 160px;
+  height: 50px;
+  margin: 0 15px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  font-family: "Nunito-Regular";
+}
+
+.sec-home-banner .banner-button a.btn.read-btn:hover {
+  color: #ffffff;
+  background: #0f3e45;
+  border: 1px solid #0f3e45;
+}
+
+.sec-home-banner .banner-button a.btn.read-btn i {
+  margin: 6px 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  font-size: 15px;
+}
+
+/* ***************  sec-home-banner css end here  ********************* */
+/* ***************  sec-home-button css start here  ********************* */
+
+.sec-home-button {
+  padding: 50px 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.sec-home-button .button-detail {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec-home-banner .banner-details h1 {
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.sec-home-button .button-detail a.btn.help-btn {
+  background: #0d3035;
+  padding: 5px 5px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 12px;
+  box-shadow: none;
+  text-transform: capitalize;
+  border: 1px solid #fff;
+  outline: none;
+  width: 260px;
+  height: 65px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  font-family: "Nunito-Regular";
+}
+
+/* ***************  sec-home-button css end here  ********************* */
+
+/* ***************  sec-home-banner.banner-inner css start here  ********************* */
+
+.sec-home-banner.banner-inner {
+  border-radius: 45% 45% 0 0;
+  height: 430px;
+  margin: 0 0 30px 0;
+}
+
+.sec-home-banner.banner-inner .banner-card {
+  background: #7c9fa5;
+  padding: 35px 35px;
+  text-align: center;
+}
+
+.sec-home-banner.banner-inner .bnr-crd-button {
+  margin: 10px auto;
+  padding: 0;
+}
+
+.sec-home-banner.banner-inner .bnr-crd-button a.btn.down-btn {
+  background: #0d3035;
+  padding: 5px 5px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 0;
+  box-shadow: none;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  width: 160px;
+  height: 45px;
+  margin: 0 15px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  font-family: "Nunito-Regular";
+}
+
+.sec-home-banner.banner-inner .bnr-crd-button a.btn.down-btn i {
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 0 0;
+  font-size: 16px;
+}
+
+.sec-home-banner.banner-inner .banner-card h2 {
+  color: #f1fbfc;
+  font-size: 35px;
+  text-transform: capitalize;
+  margin: 0 0 15px 0;
+  padding: 0;
+}
+
+/* ***************  sec-home-banner.banner-inner css end here  ********************* */
+.sec-about-banner {
+  background: linear-gradient(
+      360deg,
+      rgba(10, 41, 46, 0.5) 0%,
+      rgba(10, 41, 46, 0.5) 100%
+    ),;
+    /* url(../images/about-bg.jpg) no-repeat; */
+  background-size: cover;
+  background-position: center center;
+  padding: 118px 0;
+  position: relative;
+}
+
+.sec-about-banner.profile-bg {
+  background: linear-gradient(
+      360deg,
+      rgba(10, 41, 46, 0.5) 0%,
+      rgba(10, 41, 46, 0.5) 100%
+    ),
+    url(../images/prfoli-bg.webp) no-repeat;
+  background-size: cover;
+  padding: 350px 0;
+}
+
+.sec-about-banner.story-bg {
+  background: linear-gradient(
+      360deg,
+      rgb(10 41 46 / 55%) 0%,
+      rgb(10 41 46 / 55%) 100%
+    ),
+    url(../images/Story.webp) no-repeat;
+  background-size: cover;
+  padding: 180px 0 560px;
+  background-position: center;
+}
+
+.sec-about-banner.mission {
+  background: linear-gradient(
+      360deg,
+      rgb(10 41 46 / 60%) 0%,
+      rgb(10 41 46 / 60%) 100%
+    ),
+    url(../images/mission.webp) no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 250px 0;
+  position: relative;
+}
+
+.sec-about-banner.mental-bg {
+  background: linear-gradient(
+      360deg,
+      rgb(10 41 46 / 60%) 0%,
+      rgb(10 41 46 / 60%) 100%
+    ),
+    url(../images/mental.webp) no-repeat;
+  background-size: cover;
+  padding: 350px 0;
+}
+
+.sec-about-banner.survivors-bg {
+  background: linear-gradient(
+      360deg,
+      rgb(10 41 46 / 60%) 0%,
+      rgb(10 41 46 / 60%) 100%
+    ),
+    url(../images/head.webp) no-repeat;
+  background-size: cover;
+  padding: 350px 0;
+}
+
+.sec-about-banner .about-details {
+  text-align: center;
+}
+
+.sec-about-banner ul.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec-about-banner .about-details span {
+  color: #ffe500;
+  font-family: "Nunito-Regular";
+}
+
+.sec-about-banner .about-details h2 {
+  font-size: 50px;
+  color: #f1fbfc;
+  margin: 0 0 15px 0;
+  padding: 0;
+}
+
+.sec-about-banner ul.nav li a {
+  color: #fff;
+  text-transform: capitalize;
+}
+
+/* *************** sec-home-about-para css start here  ********************* */
+.sec-home-about-para {
+  position: relative;
+  padding: 80px 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.about-para p {
+  font-size: 29px;
+  font-weight: 900;
+  color: #212327;
+  line-height: 39px;
+}
+
+/* *************** sec-home-about-para css end here  ********************* */
+
+/* *************** sec-story  css start here  ********************* */
+.sec-story {
+  position: relative;
+  padding: 150px 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.sec-story .story-info h4 {
+  font-size: 39px;
+  line-height: 49px;
+  font-weight: 900;
+  color: #212327;
+  font-family: "Nunito-ExtraBold";
+}
+
+.story-info.mission h4 {
+  font-size: 25px;
+  line-height: 35px;
+}
+
+.story-info.mission {
+  padding: 0 20px 0;
+  margin: 0;
+}
+
+.sec-story .story-info h6 {
+  color: #015361;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+.sec-story .story-info p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #333333;
+  font-family: "Nunito-Regular";
+}
+
+.sec-story .story-img img {
+  width: 100%;
+  min-height: 600px;
+  max-height: 600px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.about-details.story {
+  position: absolute;
+  bottom: 10% !important;
+  right: 43% !important;
+  content: "";
+  z-index: 1;
+}
+
+.about-details.story,
+.about-details.mental {
+  position: absolute;
+  bottom: 25%;
+  right: 34%;
+  content: "";
+  z-index: 1;
+}
+
+/* *************** sec-story  css end here  ********************* */
+/* *************** sec-privacy-policy  css start here  ********************* */
+.sec-privacy-policy {
+  padding: 50px 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.privacy-deatils p a {
+  color: #000;
+  font-weight: 500;
+}
+
+/* *************** sec-privacy-policy  css end here  ********************* */
+/* *************** sec-mental-bg  css start here  ********************* */
+.sec-mental-bg {
+  padding: 50px 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(at center center, #ffffffcc 0%, #ffffff 75%),
+    url(../images/mental-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+}
+
+.sec-mental-bg .mental-details button.btn.search-btn,
+.sec-mental-bg .mental-box button.btn.search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffe500;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Nunito-Regular";
+  width: 120px;
+  height: 40px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0;
+}
+
+.sec-mental-bg .mental-details button.btn.search-btn:hover {
+  background: #0a292e;
+  color: #fff;
+}
+
+.sec-mental-bg .mental-details h4 {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 50px;
+  margin: 0 0 25px 0;
+}
+
+.sec-mental-bg .mental-details input,
+.sec-mental-bg .mental-box input {
+  background: #d6f2f6;
+  margin: 10px 0;
+  padding: 12px 16px;
+  font-size: 16px;
+  color: #555555;
+  font-weight: 200;
+  font-family: "NoirPro-light";
+  border-radius: 0;
+}
+
+.sec-mental-bg .mental-details img {
+  width: 100%;
+  min-height: 395px;
+  max-height: 395px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.sec-mental-bg .mental-details .recent-detail {
+  margin: 12px 0 0;
+  padding: 0;
+}
+
+.sec-mental-bg .recent-detail h6 a {
+  color: #333333;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: "Nunito-Regular";
+}
+
+.sec-mental-bg .mental-details .recent-img {
+  margin: 30px 0 0;
+  padding: 0;
+}
+
+.sec-mental-bg .mental-details .recent-detail p {
+  color: #333;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: "Nunito-Medium";
+}
+
+.sec-mental-bg .mental-box {
+  padding: 35px 35px;
+  background: #0f3e45;
+}
+
+.sec-mental-bg .mental-box h4 {
+  color: #fff;
+  font-size: 33px;
+  margin: 0 0 15px;
+  padding: 0;
+}
+
+.sec-mental-bg .mentail-box-inner {
+  margin: 0 0 35px;
+  padding: 0;
+}
+
+/* *************** sec-mental-bg  css end here  ********************* */
+/* *************** sec-servivor  css start here  ********************* */
+.sec-servivor {
+  padding: 50px 0;
+  margin: 0;
+  overflow: hidden;
+  background: #fff;
+}
+
+.sec-servivor ul.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sec-servivor .box {
+  padding: 12px 12px;
+  margin: 0;
+  background: #ffe500;
+  width: 200px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.sec-servivor .box:hover {
+  background: #0f3e45;
+}
+
+.sec-servivor .box li a {
+  color: #000;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  font-family: "Nunito-Regular";
+}
+
+.sec-servivor .box:hover a {
+  color: #fff;
+}
+
+.sec-servivor .box li i {
+  margin: 0 5px;
+  padding: 0;
+}
+
+.surviors-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.surviors-info h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  font-family: "Nunito-Regular";
+}
+
+.surviors-info h4 i {
+  margin: 0 10px 0;
+  padding: 0;
+  color: #ffe500;
+}
+
+.sec-servivor .box p {
+  margin: 0;
+  padding: 0;
+}
+
+.sec-servivor .g-box {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  background: #f1fbfc;
+  padding: 25px 25px;
+  margin: 25px 0 0;
+}
+
+.sec-servivor .g-box-img img {
+  width: 70px;
+  object-fit: contain;
+  object-position: center;
+  min-height: 70px;
+  max-height: 70px;
+  border: 4px solid #ffe500;
+}
+
+.sec-servivor .g-box-details h4 {
+  margin: 12px 15px;
+  font-size: 20px;
+  font-family: "Nunito-Regular";
+}
+
+.servivor-details p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  font-family: "Nunito-Regular";
+  line-height: 26px;
+}
+
+.g-inner-box {
+  margin: 15px 0;
+  padding: 0;
+}
+
+.sec-servivor .form-group textarea {
+  font-size: 15px;
+  background: #d6f2f6;
+  width: 100%;
+  height: 120px;
+  padding: 10px 20px;
+  color: #292929;
+  border: 1px solid #f1fbfc;
+  border-radius: 0;
+  resize: vertical;
+}
+
+.sec-servivor .contact-form .form-group input {
+  background-color: #d6f2f6;
+  color: #292929;
+  font-weight: 400;
+  border: 1px solid #f1fbfc;
+  width: 100%;
+  height: 47px;
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 0;
+  text-transform: capitalize;
+}
+
+.sec-servivor .contact-form .form-group label {
+  color: #292929;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Nunito-Regular";
+  text-transform: capitalize;
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+
+.sec-servivor .contact-form .form-group button.send-messages-btn {
+  width: 140px;
+  height: 35px;
+  background-color: #ffe500;
+  color: #000;
+  border-radius: 0;
+  border: none;
+  font-size: 14px;
+  text-transform: capitalize;
+  padding: 0;
+  margin: 0;
+  line-height: 24px;
+  transition: all 0.3s ease-in-out;
+  font-family: "Nunito-Regular";
+}
+
+.sec-servivor .contact-form .form-check {
+  margin: 20px 20px;
+  padding: 0;
+}
+
+.sec-servivor .search-area {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  padding: 12px 12px;
+}
+
+.sec-servivor .search-area input {
+  margin: 0;
+  padding: 15px 15px 12px 15px;
+  background: #d6f2f6;
+  border-radius: 0;
+  font-size: 15px;
+  text-transform: capitalize;
+  border: none;
+  height: 50px;
+}
+
+.sec-servivor .search-area button.btn.search-btn {
+  background: #ffe500;
+  color: #000;
+  padding: 16px 15px 12px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 -8px;
+  border-radius: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.sec-servivor .search-area button.btn.search-btn i {
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.sec-servivor .news-card {
+  background: #0f3e45;
+  padding: 25px 25px;
+  border: 0;
+  border-radius: 0;
+  margin: 0 15px;
+}
+
+.sec-servivor .news-card .news-info h4 {
+  font-size: 25px;
+  color: #f1fbfc;
+  margin: 0 0 25px;
+}
+
+.sec-servivor .news-card .line {
+  border-bottom: 1px solid #375f64;
+  margin: 12px 0;
+}
+
+.sec-servivor .news-card .news-info p {
+  color: #d6f2f6;
+}
+
+.sec-servivor .news-card .news-info .form-group input {
+  background-color: #f1fbfc;
+  color: #292929;
+  font-weight: 400;
+  border: 1px solid #ffffff;
+  width: 100%;
+  height: 47px;
+  padding: 5px 5px;
+  border-radius: 0;
+  text-transform: capitalize;
+  font-size: 17px;
+}
+
+.sec-servivor .news-card.info {
+  margin-top: 12px;
+  background: #f1fbfc;
+}
+
+.sec-servivor .news-card.info p {
+  color: #333;
+}
+
+.sec-servivor .news-card.info .news-info h4 {
+  color: #212327;
+}
+
+.sec-servivor .news-card.info .news-info .line {
+  border-bottom: 1px solid #c8edf3;
+}
+
+.sec-servivor .inner-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sec-servivor .info-details-img img {
+  width: 100px;
+  min-height: 60px;
+  max-height: 60px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.sec-servivor .news-info h6 {
+  font-size: 13px;
+  color: #adadad;
+}
+
+.sec-servivor .news-button button.btn.sign-btn {
+  width: 100%;
+  background: #ffe500;
+  margin: 12px 0;
+  padding: 12px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0a292e;
+  text-transform: capitalize;
+  font-size: 16px;
+  border-radius: 0;
+  border: none;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  font-family: "Nunito-Regular";
+}
+
+.sec-servivor .news-button button.btn.sign-btn:hover {
+  background: #f1fbfc;
+  color: #000;
+}
+
+.journals-card {
+  background: #ffffff;
+  padding: 8px 8px;
+  border: 0;
+  border-radius: 0;
+  margin: 0 15px;
+}
+
+.journal-info h6 {
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 600;
+}
+
+.journal-img img {
+  width: 100%;
+  margin: 0 0 15px 0;
+}
+
+.journal-info span {
+  color: #808080;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.journal-info p {
+  color: #808080;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "Nunito-Light";
+}
+
+.journal-info a {
+  font-family: "Nunito-Light";
+  color: #333;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+
+.journal-info a i {
+  margin: 0 5px;
+  font-size: 9px;
+}
+
+/* *************** sec-servivor  css end here  ********************* */
+.privacy-deatils-info p a {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+.privacy-deatils-info ul {
+  list-style: decimal;
+  padding: 12px 12px;
+  margin: 0;
+}
+.privacy-deatils-info h6 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+}
+
+/* ***************  main-footer css start here  ********************* */
+
+.main-footer {
+  background: linear-gradient(
+    180deg,
+    rgba(17, 35, 90, 1) 0%,
+    rgba(36, 61, 136, 1) 100%
+  );
+  padding: 50px 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-footer .ft-logo img {
+  width: 90px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.ft-btm {
+  background: #11235a;
+  padding: 0;
+  margin: 0;
+}
+
+.ft-btm-detail p {
+  font-size: 13px;
+  padding: 15px 0 0;
+  font-weight: 500;
+  color: #fff;
+  font-family: "Nunito-Regular";
+}
+
+.ft-para p {
+  color: #fff;
+  font-size: 15px;
+  line-height: 25px;
+  font-family: "Nunito-Regular";
+}
+
+.ft-links h4,
+.ft-details h4 {
+  color: #ffffff;
+  margin: 0 0 15px 0;
+  padding: 0 9px 0;
+  font-size: 20px;
+  font-family: "Nunito-Regular";
+}
+
+.main-footer ul.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 3px 0;
+}
+
+.main-footer ul.list li a {
+  color: #fff;
+  font-size: 14px;
+  font-family: "Nunito-Regular";
+  transition: all 0.3s ease-in-out;
+  border-right: 1px solid #ffffff42;
+  padding: 0 9px 0 8px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.ft-links {
+  padding: 0;
+  margin: 0;
+}
+
+.main-footer ul.list li a:hover {
+  color: #ffe500;
+}
+
+.main-footer ul.list li a i {
+  margin: 0 5px 0 0;
+  font-size: 12px;
+  color: #ffe500;
+}
+
+.list-social-icon ul.icon {
+  font-size: 22px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.list-social-icon a i {
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.list-social-icon a i:hover {
+  color: #000;
+}
+
+.list-social-icon a {
+  border: none;
+  border-radius: 0;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 6px;
+  background: #3b599894;
+  transition: all 0.3s ease-in-out;
+}
+
+.list-social-icon a:hover {
+  background: #ffe500;
+}
+
+/* ***************  main-footer css end here  ********************* */
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+}
+
+@media only screen and (min-width: 300px) and (max-width: 575px) {
+  .mobile-menu {
+    display: block;
+  }
+
+  header .main-nav {
+    justify-content: center;
+  }
+
+  .header-top-bg {
+    display: block;
+  }
+
+  .sec-home-banner {
+    padding: 50px 0;
+    border-radius: 0;
+  }
+
+  .sec-home-banner .banner-details h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .sec-home-banner .banner-details h1 br,
+  .sec-home-banner .banner-details p br {
+    display: none;
+  }
+
+  header .top-para {
+    font-size: 13px;
+  }
+
+  .sec-home-banner .banner-details {
+    text-align: start;
+  }
+
+  .sec-home-banner .banner-button {
+    justify-content: start;
+  }
+
+  header .top-para a i {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    margin: 0 0 12px 0;
+  }
+}
+
+/* New CSS Start Here */
+/* Surviors Page CSS Start Here */
+section.form-slide-main {
+  padding: 50px 0px;
+}
+
+section.form-slide-main .slider-serving {
+  background: linear-gradient(180deg, #0f3e45 0%, #11235a 100%);
+  padding: 25px 25px 10px;
+  border-radius: 15px;
+}
+
+.slider-serving .slide-auth-img {
+}
+
+.slider-serving .slide-auth-img img {
+  width: 100%;
+  border-radius: 15px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.slider-serving .slide-auth-detail {
+  background: #0000009c;
+  border-radius: 15px;
+  margin-top: 20px;
+  padding: 25px;
+}
+
+.slider-serving .slide-auth-detail ul {
+}
+
+.slider-serving .slide-auth-detail ul li {
+  color: white;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-family: oswald;
+  letter-spacing: 1px;
+}
+
+.slider-serving .slide-auth-det {
+  background: #0000009c;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.slider-serving .slide-auth-det h4 {
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 35px;
+  text-transform: uppercase;
+  font-family: "Euclid";
+}
+
+.slider-serving .slide-auth-det p {
+  color: white;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 400;
+  overflow-y: scroll;
+  min-height: 465px;
+  max-height: 465px;
+  padding-right: 12px;
+}
+
+.slider-serving .slide-auth-det p::-webkit-scrollbar {
+  width: 7px;
+}
+
+.slider-serving .slide-auth-det p::-webkit-scrollbar-track {
+  background: white;
+}
+
+.slider-serving .slide-auth-det p::-webkit-scrollbar-thumb {
+  background-color: #a6a6a6;
+}
+
+.slider-serving .slide-auth-det p::-webkit-scrollbar-thumb:hover {
+  color: #555;
+}
+
+section.form-slide-main .form-div {
+}
+
+section.form-slide-main .form-div .form-group {
+  margin-bottom: 8px;
+}
+
+section.form-slide-main .form-div .form-group input {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #c8edf3;
+  box-shadow: rgba(0, 0, 0, 0.094) 0px 0px 0px 0.924184px inset;
+  min-height: 47px;
+  padding: 6px 16px;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.form-div .form-group label {
+  color: #333333;
+  font-family: Nunito, sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+}
+section.form-slide-main .form-div .form-group input::placeholder {
+  text-transform: capitalize;
+  color: grey;
+}
+
+section.form-slide-main .form-div .form-group input[type="file"] {
+  background: #c8edf3;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  min-height: 0;
+}
+
+section.form-slide-main .form-div .form-group button.submit-btn {
+  background-color: #0f3e45;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #ffffff;
+  min-height: 47px;
+  padding: 10px 15px;
+  font-family: "Euclid";
+  width: 100%;
+  text-transform: capitalize;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+section.form-slide-main .slide-surv {
+}
+
+section.form-slide-main .slide-surv button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: none;
+  transform: translate(-50px, -50px);
+  z-index: 111 !important;
+  background-color: #333 !important;
+  border-radius: 50px !important;
+  padding: 10px !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+section.form-slide-main .slide-surv .owl-nav {
+}
+
+section.form-slide-main .slide-surv button i {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+
+section.form-slide-main .slide-surv button.owl-prev {
+  left: 0px;
+}
+
+section.form-slide-main .slide-surv button.owl-next {
+  right: -100px;
+  left: auto;
+}
+
+/* Editor CSS Starrt Here */
+#wysiwyg {
+  border-radius: 8px;
+  max-width: 600px;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #c8edf3;
+  box-shadow: rgba(0, 0, 0, 0.094) 0px 0px 0px 0.924184px inset;
+}
+#wysiwyg .btns {
+  padding: 0.3em 0.3em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 1px solid #efefef;
+  background-color: white;
+  flex-grow: 2;
+}
+#wysiwyg .btns .category {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #efefef;
+  padding: 0 4px;
+}
+#wysiwyg #editor {
+  resize: none;
+  background-color: white;
+  outline-style: none;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  height: 19vh;
+  overflow: auto;
+}
+#wysiwyg #editor img {
+  max-width: 100%;
+}
+
+.form-slide-main option {
+  background-color: white;
+  color: grey;
+}
+
+.form-slide-main select,
+.form-slide-main input,
+.form-slide-main button {
+  background-color: white;
+  border: none;
+  padding: 0.5em 0.8em;
+  border-radius: 4px;
+  color: grey;
+  cursor: pointer;
+  outline-style: none;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+.form-slide-main select:hover,
+.form-slide-main input:hover,
+.form-slide-main button:hover {
+  background-color: #efefef;
+  color: black;
+}
+.form-slide-main select:not(:last-child),
+.form-slide-main input:not(:last-child),
+.form-slide-main button:not(:last-child) {
+  margin-right: 4px;
+}
+.form-slide-main select[type="color"],
+.form-slide-main input[type="color"],
+.form-slide-main button[type="color"] {
+  width: 1.2em;
+}
+.form-slide-main select[type="number"],
+.form-slide-main input[type="number"],
+.form-slide-main button[type="number"] {
+  width: 3em;
+}
+/* Surviors Page CSS Start End */
+
+/* Donation Page CSS Start Here */
+.donate-bg {
+  background: linear-gradient(
+      360deg,
+      rgba(10, 41, 46, 0.5) 0%,
+      rgba(10, 41, 46, 0.5) 100%
+    ),
+    url(../images/donate.webp) no-repeat;
+  background-size: cover;
+  padding: 180px 0 240px;
+}
+
+/* multi step form start here */
+.sec-home-form {
+  padding: 50px 0;
+  margin: 0;
+}
+
+#signUpForm {
+  max-width: 600px;
+  background-color: #ffffff;
+  margin: 40px auto;
+  padding: 40px;
+  box-shadow: 0px 6px 18px rgb(0 0 0 / 9%);
+  border-radius: 12px;
+  position: relative;
+}
+#signUpForm h4 {
+  font-size: 30px;
+  line-height: 37px;
+  font-weight: 700;
+  font-family: "Nunito-SemiBold";
+}
+
+#signUpForm hr {
+  margin: 15px auto;
+  color: #28c77b !important;
+  border-radius: 4px;
+  height: 3px;
+  width: 90px;
+  opacity: 2;
+  border: 1px solid #28c77b;
+  background: #28c77b !important;
+}
+
+#signUpForm p {
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 400;
+}
+
+#signUpForm .form-group {
+}
+
+#signUpForm .form-group img {
+  width: 100%;
+}
+
+#signUpForm .form-header {
+  gap: 5px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+#signUpForm input {
+  background: #fff;
+  border: 1px solid #b8b8b8 !important;
+  border-radius: 4px !important;
+  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.152);
+  box-sizing: border-box;
+  color: #828382;
+  font-size: 14px;
+  font-weight: 400;
+  height: auto;
+  line-height: 1;
+  padding: 14px !important;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#signUpForm input:focus {
+  border: 1px solid #009688;
+  outline: 0;
+}
+
+#signUpForm input.invalid {
+  border: 1px solid #ffaba5;
+}
+
+#signUpForm .step {
+  display: none;
+}
+
+#signUpForm .form-footer {
+  overflow: auto;
+  gap: 20px;
+}
+
+#signUpForm .form-footer button {
+  background-color: #28c77b !important;
+  border: 2px solid #28c77b !important;
+  color: #ffffff;
+  border: none;
+  padding: 13px 30px;
+  font-size: 22px;
+  line-height: 29px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin: 0 auto;
+}
+#signUpForm button {
+  margin-top: 30px !important;
+}
+
+#signUpForm .form-footer button:hover {
+  opacity: 0.8;
+}
+
+#signUpForm .form-footer #prevBtn {
+  background-color: #fff;
+  color: #009688;
+}
+
+#signUpForm .chse-ant {
+  border-bottom: 1px solid #f2f2f2f2;
+  text-align: center;
+  margin-top: -30px;
+  margin-bottom: 10px;
+}
+
+#signUpForm .chse-ant p {
+  font-size: 19px;
+  line-height: 26px;
+}
+
+#signUpForm .chs-discli {
+}
+
+#signUpForm .chs-discli p {
+  text-align: center;
+  color: #6f6f6f;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+#signUpForm .amt-div-inp {
+  background-color: #fff;
+  border: 1px solid #979797;
+  border-radius: 4px !important;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.22);
+  display: flex;
+  margin: 5px auto 15px !important;
+  max-width: 50%;
+  padding: 18px;
+  color: #696969;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+#signUpForm .amt-div-inp label {
+  border-right: 1px dotted #aaa !important;
+  padding-right: 24px !important;
+  font-size: 25px;
+  line-height: 32px;
+  font-weight: 700;
+  color: black;
+}
+
+#signUpForm .amt-div-inp input {
+  border: 0 !important;
+  color: #333;
+  font-size: 25px !important;
+  font-weight: 500 !important;
+  text-align: center;
+  z-index: 1;
+  padding: 0;
+  position: relative;
+  margin: 0;
+  box-shadow: none !important;
+}
+
+#signUpForm .amt-dv-bx {
+}
+
+#signUpForm .amt-dv-bx .amt-bx {
+  background: #28c77b;
+  border: 2px solid #28c77b;
+  margin-bottom: 10px;
+  color: #fff;
+  line-height: 1;
+  padding: 15px 10px;
+  text-align: center;
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+}
+
+#signUpForm .amt-dv-bx .amt-bx p {
+  margin-bottom: 0;
+  font-size: 34px;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+#signUpForm .amt-dv-bx .amt-bx:hover {
+  filter: brightness(1.2);
+}
+#signUpForm .amt-dv-bx .amt-bx p span {
+  font-size: 20px;
+  line-height: 30px;
+  position: relative;
+  top: -7px;
+  margin-right: 5px;
+}
+
+#signUpForm .amt-dv-bx .amt-bx p.cut-amt {
+  font-size: 17px;
+}
+#signUpForm .chse-ant:before {
+  content: "\f053";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 20px;
+  font-family: "Font Awesome 6 Pro";
+  line-height: 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#signUpForm .chs-discli h4 {
+  text-align: center;
+  font-size: 20px;
+  line-height: 27px;
+  margin-top: 40px;
+  color: #6b6b6b;
+  font-family: "Nunito-SemiBold";
+}
+
+#signUpForm .lst-inp-div {
+}
+
+#signUpForm .lst-inp-div .lst-inner-input {
+}
+
+.tab-lst-div {
+  border: none !important;
+}
+
+.tab-lst-div .accordion-item {
+  border: none !important;
+}
+
+.tab-lst-div .accordion-item button.accordion-button {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  border: 1px solid #f1f1f1;
+  color: #333;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22px;
+  padding-left: 23px;
+  display: flex;
+  padding-right: 12px;
+  text-align: left;
+  align-items: center;
+}
+
+.tab-lst-div .accordion-item button.accordion-button input[type="radio"] {
+  margin-right: 10px;
+  width: 15px !important;
+  height: 15px !important;
+  accent-color: green;
+  margin-bottom: 0 !important;
+}
+
+.tab-lst-div .accordion-item:nth-child(1) button.accordion-button::after {
+  content: "\f7d9";
+  font-family: "Font Awesome 6 Pro";
+  background: none;
+  transform: none;
+  color: #696969;
+}
+
+.tab-lst-div .accordion-item .accordion-body {
+  padding: 25px 0px 15px;
+}
+
+.tab-lst-div .accordion-item .accordion-body img {
+  margin: 0 auto 20px;
+  display: flex;
+}
+
+.tab-lst-div .accordion-item .accordion-body h6 {
+  text-align: center;
+  color: #6f6f6f;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.tab-lst-div .accordion-item .accordion-body p {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 17px !important;
+  line-height: 24px !important;
+  color: #6f6f6f;
+  margin: 10px auto;
+  opacity: 0.7;
+}
+
+.tab-lst-div .accordion-item .accordion-body p strong {
+}
+
+.tab-lst-div .accordion-item:nth-child(2) button.accordion-button::after {
+  content: "\f555";
+  font-family: "Font Awesome 6 Pro";
+  background: none;
+  transform: none;
+  color: #696969;
+}
+
+.tab-lst-div .accordion-item:nth-child(3) button.accordion-button::after {
+  content: "\f1ed";
+  font-family: "Font Awesome 6 Pro";
+  background: none;
+  transform: none;
+  color: #696969;
+}
+
+::after {
+}
+
+.tab-lst-div .accordion-item:nth-child(4) button.accordion-button::after {
+  content: "\f09d";
+  font-family: "Font Awesome 6 Pro";
+  background: none;
+  transform: none;
+  color: #696969;
+}
+.tab-lst-div .accordion-item .accordion-body .pypl-tb-div {
+}
+
+.tab-lst-div .accordion-item .accordion-body .pypl-tb-div ol {
+  list-style: decimal;
+  padding-left: 30px;
+}
+
+.tab-lst-div .accordion-item .accordion-body .pypl-tb-div ol li {
+  color: #696969;
+  font-size: 17px;
+  line-height: 24px;
+  margin-bottom: 6px;
+  opacity: 0.7;
+}
+
+.tab-lst-div .accordion-item .accordion-body .pypl-tb-div p {
+  text-align: left;
+}
+#signUpForm .lst-pra {
+  margin-top: 35px;
+  text-align: center;
+}
+
+#signUpForm .lst-pra p {
+  font-style: italic;
+  font-size: 20px;
+  line-height: 27px;
+  color: #6b6b6b;
+}
+
+#signUpForm .summry-lst-dv {
+  margin-top: 30px;
+}
+
+#signUpForm .summry-lst-dv .lst-div-sum {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 10px 0px;
+}
+
+#signUpForm .summry-lst-dv .lst-div-sum p {
+  color: #333333;
+  margin-bottom: 0;
+}
+
+#signUpForm .summry-lst-dv .lst-div-sum a {
+  color: #28c77b;
+  text-decoration: underline;
+  font-size: 14px;
+  line-height: 24px;
+  position: relative;
+}
+
+#signUpForm .summry-lst-dv .lst-div-sum a:after {
+  content: "\f044";
+  font-family: "Font Awesome 5 Pro";
+  text-decoration: none !important;
+  margin-left: 10px;
+}
+
+#signUpForm button.collapsed input[type="radio"] {
+  accent-color: white;
+}
+/* multi step form start here */
+
+/* Cont Form Section CSS Start Here */
+section.cont-form-sec-main {
+  padding: 50px 0px;
+}
+
+section.cont-form-sec-main .frm-cont-div {
+  width: 100%;
+  margin: 0 auto;
+  background: #0f3e45;
+  padding: 64px;
+  /* border-radius: 10px; */
+}
+
+section.cont-form-sec-main .frm-cont-div .cont-input {
+  display: grid;
+  margin-bottom: 10px;
+}
+
+.frm-cont-div .cont-input label {
+  margin-bottom: 5px;
+  color: white;
+  font-size: 16px;
+  font-family: "Nunito-SemiBold";
+}
+
+.frm-cont-div .cont-input input,
+.frm-cont-div .cont-input textarea {
+  padding: 10px;
+  background-color: #d6f2f6;
+  border: 1px solid #d6f2f6;
+  outline: none;
+  color: white;
+}
+
+section.cont-form-sec-main .frm-cont-div textarea {
+  height: 135px;
+}
+
+section.cont-form-sec-main .frm-cont-div button {
+  width: 100%;
+  background-color: #ffe500;
+  border: 1px solid #ffe500;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 600;
+}
+
+section.cont-form-sec-main .frm-cont-div button:hover {
+  background-color: #d6f2f6;
+  border-color: #d6f2f6;
+}
+section.cont-form-sec-main .frm-cont-div h2 {
+  color: white;
+  font-family: "Nunito-SemiBold";
+  font-size: 35px;
+  line-height: 42px;
+  text-transform: capitalize;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+/* Cont Form Section CSS End Here */
+
+/* FAQ Section CSS Start Here */
+section.faq-sec-main {
+  padding: 50px 0px;
+}
+
+section.faq-sec-main .faq-img-div {
+}
+
+section.faq-sec-main .faq-img-div img {
+  width: 80%;
+  height: 650px;
+  object-fit: cover;
+  box-shadow: 1px 3px 10px grey;
+}
+
+section.faq-sec-main .faq-content-main {
+}
+
+.faq-content-main .faq-cont-head {
+  margin-bottom: 30px;
+}
+
+.faq-content-main .faq-cont-head h6 {
+  color: #ffe500;
+  font-family: inter;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.faq-content-main .faq-cont-head h2 {
+  font-size: 41px;
+  line-height: 49px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.faq-content-main .faq-cont-head p {
+  font-size: 17px;
+  line-height: 23px;
+  font-weight: 400;
+}
+
+.faq-content-main .accordion-item {
+  border: none !important;
+}
+
+.faq-content-main .accordion-item h2 {
+}
+
+.faq-content-main .accordion-item h2 button {
+  background-color: #0b292e;
+  border-radius: 0 !important;
+  border: none !important;
+  color: #fff;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.faq-content-main .accordion-item h2 button.collapsed {
+  background-color: #f1fbfc;
+  color: #000;
+}
+
+.faq-content-main .accordion-item h2 button::after {
+  filter: brightness(0) saturate(100%) invert(87%) sepia(27%) saturate(2943%)
+    hue-rotate(358deg) brightness(106%) contrast(105%);
+}
+
+.faq-content-main .accordion-item h2 button.collapsed::after {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(16%)
+    hue-rotate(338deg) brightness(93%) contrast(107%);
+}
+
+/* FAQ Section CSS End Here */
+
+/* pushing Section CSS Start Here */
+section.blg-main-sec {
+  padding: 50px 0px;
+}
+
+section.blg-main-sec .blg-cont-head {
+  margin-bottom: 30px;
+}
+
+section.blg-main-sec .blg-cont-head h1 {
+  text-align: center;
+  color: #222;
+  margin: 0 0 16px 0;
+  font-family: "DM Sans", Sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: -2.24px;
+}
+
+section.blg-main-sec .blg-sec-crd {
+}
+
+section.blg-main-sec .blg-sec-crd .blg-sec-crd-div {
+  margin-top: 30px;
+}
+
+.blg-sec-crd .blg-sec-crd-div img {
+  width: 100%;
+}
+
+.blg-sec-crd .blg-sec-crd-div .recent-detail {
+  margin-top: 15px;
+}
+
+.blg-sec-crd .blg-sec-crd-div .recent-detail .heading-six {
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 900;
+  font-family: "Nunito-Light";
+}
+
+.blg-sec-crd .blg-sec-crd-div .recent-detail .heading-six a {
+  color: #333333;
+}
+
+.blg-sec-crd .blg-sec-crd-div .recent-detail p {
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 400;
+  color: black;
+}
+
+/* pushing Section CSS End Here */
+
+/* Serach Page CSS Start Here */
+section.search-crd-main {
+  padding: 50px 0px;
+}
+
+section.search-crd-main .searc-crd {
+  background-color: #d8d8d8;
+  padding: 25px;
+  min-height: 550px;
+}
+
+section.search-crd-main .searc-crd img {
+  width: 100%;
+}
+
+section.search-crd-main .searc-crd h3 {
+  margin-top: 20px;
+  color: #212327;
+  font-family: auto;
+  font-size: 25px;
+  line-height: 32px;
+}
+
+section.search-crd-main .searc-crd p {
+  font-size: 16px;
+  color: #333333;
+  font-family: auto;
+}
+/* Serach Page CSS End Here */
+/* Mental Resouces Page CSS Start Here */
+section.ment-healt-baner {
+  padding: 30px 0px;
+}
+
+section.ment-healt-baner .banner-cont-head-ment {
+}
+
+.banner-cont-head-ment img {
+  width: 100%;
+}
+
+section.digital-men-sec-main {
+  border-top: 55px solid #ffe500;
+  margin: 0 15px;
+  padding-bottom: 30px;
+}
+
+section.digital-men-sec-main .digit-ment-img-div {
+  padding-left: 30px;
+  margin-top: -25px;
+}
+
+.digit-ment-img-div img {
+  width: 100%;
+}
+
+section.digital-men-sec-main .digital-cont-div {
+  padding-right: 100px;
+  padding-left: 30px;
+}
+
+.digital-cont-div h2 {
+  font-family: "Fira Sans";
+  font-weight: 700;
+  font-size: 29px;
+  line-height: 39px;
+  color: #3a3a3a;
+}
+
+.digital-cont-div p {
+  font-family: "Fira Sans";
+  font-size: 23px;
+  color: #3a3a3a;
+  letter-spacing: 0.7px;
+  line-height: 33px;
+  margin-top: 20px;
+}
+
+section.company-ment-card-main {
+  padding: 30px 20px;
+}
+
+section.company-ment-card-main .crd-men-div {
+  background-color: #d8d8d8;
+  padding: 30px 10px;
+  text-align: center;
+  min-height: 350px;
+  height: 100%;
+}
+
+.crd-men-div img {
+  width: 35%;
+}
+
+.crd-men-div h3 {
+  font-size: 30px;
+  line-height: 40px;
+  font-family: "Fira Sans";
+  font-weight: 500;
+  color: #3a3a3a;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.crd-men-div p {
+  font-size: 15px;
+  line-height: 25px;
+  font-family: "Nunito-Regular";
+}
+
+.crd-men-div .crd-men-btn {
+  background-color: #de7c3b;
+  padding: 10px;
+  width: 25%;
+  border-radius: 7px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.crd-men-div .crd-men-btn a {
+  color: white;
+  font-size: 27px;
+  text-transform: capitalize;
+  font-weight: 700;
+  line-height: 37px;
+}
+
+.crd-men-div .crd-men-btn a:before {
+  content: "\f105";
+  font-family: "Font Awesome 6 Pro";
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 35px;
+  font-weight: 800;
+  color: #f7d86d;
+}
+.crd-men-div .crd-men-btn.soluna-btn {
+  background-color: #372a72;
+}
+section.schol-resouces-main-sec {
+  border-top: 55px solid #ffe500;
+  margin: 0 15px;
+  padding-bottom: 30px;
+}
+
+section.schol-resouces-main-sec .school-resouces-crd-dv {
+  margin-top: -25px;
+  padding: 0px 40px;
+  text-align: center;
+}
+
+.school-resouces-crd-dv img {
+  width: 100%;
+}
+
+.school-resouces-crd-dv h3 {
+  font-size: 29px;
+  line-height: 39px;
+  font-family: "Fira Sans";
+  font-weight: 500;
+  margin-top: 20px;
+  color: #3a3a3a;
+}
+
+.school-resouces-crd-dv p {
+  font-size: 15px;
+  line-height: 25px;
+  font-family: "Nunito-Regular";
+}
+.school-resouces-crd-dv p strong a {
+  color: black;
+}
+.school-resouces-crd-dv .schl-res-btn-main {
+  background-color: #8cc63f;
+  padding: 10px;
+  width: 35%;
+  border-radius: 7px;
+  margin: 20px auto 0px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.school-resouces-crd-dv .schl-res-btn-main a {
+  color: #1b365d;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.school-resouces-crd-dv .schl-res-btn-main a:before {
+  content: "\f105";
+  font-family: "Font Awesome 6 Pro";
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  font-size: 25px;
+  font-weight: 800;
+  color: #1b365d;
+}
+
+section.ment-heal-resources-main {
+  padding: 0 10px 50px;
+}
+
+section.ment-heal-resources-main .healh-head-dv {
+  background-color: #1c355e;
+  padding: 14px 10px 12px 37px;
+  margin-bottom: 10px;
+}
+
+.healh-head-dv h2 {
+  color: white;
+  font-size: 33px;
+  font-family: "Fira Sans";
+  font-weight: 500;
+  margin: 0;
+}
+
+section.ment-heal-resources-main .mental-health-para-dv {
+  padding: 0px 40px;
+  margin: 20px 0 40px;
+}
+
+.mental-health-para-dv h3 {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 400;
+  font-family: "Fira Sans";
+  margin-bottom: 20px;
+}
+
+.mental-health-para-dv p {
+  font-size: 15px;
+  line-height: 25px;
+  font-family: "Nunito-Regular";
+}
+
+section.ment-heal-resources-main .mental-health-res-card-dv {
+  padding: 20px 30px 30px 50px;
+  background-color: #d8d8d8;
+  min-height: 350px;
+  margin: 10px;
+}
+
+.mental-health-res-card-dv h3 {
+  font-size: 23px;
+  line-height: 33px;
+  font-weight: 500;
+  font-family: "Fira Sans";
+  color: #3a3a3a;
+  margin-bottom: 25px;
+}
+
+.mental-health-res-card-dv p {
+  font-size: 15px;
+  line-height: 25px;
+  font-family: "Nunito-Regular";
+}
+.mental-health-res-card-dv p a {
+  color: #6ec1e4;
+}
+
+.mental-health-res-card-dv .ment-heal-res-btn-main {
+  background-color: #17355d;
+  padding: 10px;
+  width: 35%;
+  border-radius: 7px;
+  margin-top: 20px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.mental-health-res-card-dv .ment-heal-res-btn-main a {
+  color: #fff;
+  font-size: 17px;
+  text-transform: capitalize;
+  font-weight: 500;
+  line-height: 27px;
+}
+
+.mental-health-res-card-dv .ment-heal-res-btn-main a:before {
+  content: "\f105";
+  font-family: "Font Awesome 6 Pro";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 25px;
+  font-weight: 800;
+  color: #fff;
+  background-color: #112238;
+  padding: 10px 15px;
+  border-radius: 0px 10px 10px 0px;
+}
+/* Mental Resouces Page CSS End Here */
