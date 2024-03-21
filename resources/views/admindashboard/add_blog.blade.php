@@ -1,5 +1,13 @@
 @extends('admindashboard.layouts.app')
 @section('content')
+@extends('admindashboard.layouts.app')
+@section('content')
+@extends('admindashboard.layouts.app')
+@section('content')
+@extends('admindashboard.layouts.app')
+@section('content')
+@extends('admindashboard.layouts.app')
+@section('content')
 
         <!-- End Header -->
 
@@ -8,24 +16,7 @@
             <div class="container-fluid">
                 <div class="row">
 
-
-                    <div class="col-lg-12 setting-main  ">
-                        <div class="d-flex align-items-start">
-                            <div class="tab-content" id="v-pills-tabContent">
-                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                                    aria-labelledby="v-pills-home-tab">
-
-                                    <div class="row">
-
-                                        @if (session()->has('success'))
-                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                            <strong> {{ session()->get('success') }}</strong>
-                xcccxcxcvcvbcvbnvn                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                          </div>
-                                        @endif
-
-                                        <div class="col-lg-12">
-                                            <div class="row border border-5 border-dark m-auto py-2">
+                     <div class="row border border-5 border-dark m-auto py-2">
                                                 <div class="personal-informations-from-btn col-lg-6 m-auto">
                                                     <h1 align="left"><b>Add Blog</b></h1>
                                                 </div>
