@@ -17,11 +17,11 @@
   padding: 118px 0;
   position: relative;">
         <div class="container">
-          gsfgas  <div class="row">
+          hello  <div class="row">
                 <div class="col-12 col-ms-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <div class="about-details">
                         <h2 class="heading-two">{{ get_cms('banner_tittle','about','value') }}</h2>
-                        <ul class="nav">
+                     <ul class="nav">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="index.php">home</a>
                             </li>
