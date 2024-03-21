@@ -20,7 +20,7 @@
                                         @if (session()->has('success'))
                                         <div class="alert alert-warning alert-dismissible fade show" role="alert">
                                             <strong> {{ session()->get('success') }}</strong>
-                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                xcccxcxcvcvbcvbnvn                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                           </div>
                                         @endif
 
@@ -79,7 +79,7 @@
                                                                 <label for="exampleFormControlInput1"
                                                                     class="form-label">Image</label>
                                                                 <input type="file" name="image" class="form-control"
-                                                                    aria-label="First name" required> 
+                                                                    aria-label="First name" required>
                                                                     @if($errors->has('image'))
                                                                     <div class="text-danger">{{ $errors->first('image') }}</div>
                                                                     @endif
