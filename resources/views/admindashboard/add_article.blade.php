@@ -1,5 +1,5 @@
 @extends('admindashboard.layouts.app')
-@section('content')vnbn
+@section('content')
 
         <!-- End Header -->
 
