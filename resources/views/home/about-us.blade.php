@@ -17,7 +17,7 @@
   padding: 118px 0;
   position: relative;">
         <div class="container">
-            <div class="row">
+          gsfgas  <div class="row">
                 <div class="col-12 col-ms-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <div class="about-details">
                         <h2 class="heading-two">{{ get_cms('banner_tittle','about','value') }}</h2>
