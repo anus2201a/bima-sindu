@@ -1,5 +1,5 @@
 @extends('admindashboard.layouts.app')
-@section('content')
+@section('content')vnbn
 
         <!-- End Header -->
 
@@ -62,7 +62,7 @@
                                                     </div>
                                                 </div>
 
-                                                
+
                                                 <div class="personal-informations-from-btn">
                                                 <button type="submit" class="btn-one">Submit</button>
 
